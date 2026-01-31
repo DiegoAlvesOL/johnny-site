@@ -4,139 +4,195 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J&A Direct | Design Showcase</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background: #f0f2f5;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            margin: 0;
-            padding: 20px;
-        }
+    <title>JA Direct | Premium Logistics Ireland</title>
+    <meta name="description"
+        content="JA Direct: Reliable logistics solutions across Ireland. Delivering value with precision and speed.">
 
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-        }
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
 
-        p {
-            color: #666;
-            margin-bottom: 40px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            width: 100%;
-        }
-
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            transition: transform 0.2s, box-shadow 0.2s;
-            text-decoration: none;
-            color: inherit;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 15px;
-            width: fit-content;
-        }
-
-        .tag-1 {
-            background: #e3f2fd;
-            color: #1565c0;
-        }
-
-        .tag-2 {
-            background: #e8f5e9;
-            color: #2e7d32;
-        }
-
-        .tag-3 {
-            background: #eceff1;
-            color: #37474f;
-        }
-
-        h2 {
-            margin: 0 0 10px 0;
-            font-size: 1.5rem;
-        }
-
-        .desc {
-            font-size: 0.95rem;
-            color: #555;
-            line-height: 1.5;
-            flex-grow: 1;
-        }
-
-        .btn {
-            margin-top: 20px;
-            padding: 10px 0;
-            text-align: center;
-            background: #f5f5f5;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-
-        .card:hover .btn {
-            background: #333;
-            color: white;
-        }
-    </style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style-model2.css">
 </head>
 
 <body>
-    <h1>J&A Direct</h1>
-    <p>Select a model to view</p>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-outline" id="cursor-outline"></div>
 
-    <div class="grid">
-        <a href="portfolio/model1.html" class="card">
-            <span class="tag tag-1">Model 1</span>
-            <h2>The Trusted Partner</h2>
-            <p class="desc">Focus on partnership with FedEx. Clean, professional design, corporate colors (Blue/Orange).
-                Ideal for conveying security and authority.</p>
-            <div class="btn">View Model 1</div>
-        </a>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/img/logo-white.png" alt="JA Direct" style="height: 40px; width: auto;">
+            </a>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#stats" class="nav-link">Numbers</a></li>
+                <li><a href="#estimate" class="nav-link">Estimate</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-        <a href="portfolio/model2.html" class="card">
-            <span class="tag tag-2">Model 2</span>
-            <h2>Modern Logistics</h2>
-            <p class="desc">Dynamic and interactive design. Glassmorphism, custom cursor, and smooth animations. Ideal
-                to impress and show innovation.</p>
-            <div class="btn">View Model 2</div>
-        </a>
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-bg-elements">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
 
-        <a href="portfolio/model3.html" class="card">
-            <span class="tag tag-3">Model 3</span>
-            <h2>Scalability & Future</h2>
-            <p class="desc">Institutional and robust style. Focus on data, infrastructure, and large operations. Dark
-                colors and grid layout.</p>
-            <div class="btn">View Model 3</div>
-        </a>
-    </div>
+        <div class="container hero-content">
+            <div class="hero-brand hidden-load" id="hero-brand">
+                <img src="assets/img/logo-white.png" alt="JA Direct logo">
+            </div>
+
+            <h1 class="hero-title" id="hero-title"></h1>
+            <p class="hero-subtitle" id="hero-subtitle"></p>
+
+            <div class="hero-cta hidden-load" id="hero-cta">
+                <a href="#contact" class="btn btn-primary" data-hover-trigger>Get Started</a>
+                <a href="#about" class="btn btn-secondary" data-hover-trigger>Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container about-container">
+            <div class="about-text" data-reveal="left">
+                <span class="section-label">Who We Are</span>
+                <h2 class="section-title">Built on Trust, <br>Driven by Efficiency.</h2>
+                <p>JA Direct is a premier logistics partner operating exclusively in Ireland. We specialize in van and
+                    truck deliveries, ensuring your cargo reaches its destination safely and on time. We understand the
+                    local landscape and the pulse of Irish business.</p>
+                <div class="feature-pills">
+                    <span class="pill">Local Experts</span>
+                    <span class="pill">24/7 Support</span>
+                    <span class="pill">Secure Transport</span>
+                </div>
+            </div>
+            <div class="about-visual" data-reveal="right">
+                <div class="visual-card">
+                    <div class="icon-box">📍</div>
+                    <h3>Nationwide Coverage</h3>
+                    <p>From Dublin to Cork, Galway to Belfast. We cover every corner.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Numbers / Stats -->
+    <section class="section stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-reveal="up">
+                    <span class="stat-number" data-count="15000">0</span>
+                    <span class="stat-label">Successful Deliveries</span>
+                </div>
+                <div class="stat-item" data-reveal="up" style="transition-delay: 0.1s;">
+                    <span class="stat-number" data-count="32">0</span>
+                    <span class="stat-label">Counties Covered</span>
+                </div>
+                <div class="stat-item" data-reveal="up" style="transition-delay: 0.2s;">
+                    <span class="stat-number" data-count="10">0</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freight Estimate (Mockup) -->
+    <section class="section estimate" id="estimate">
+        <div class="container">
+            <div class="estimate-wrapper" data-reveal="zoom">
+                <div class="estimate-header">
+                    <h2 class="section-title">Freight Estimator</h2>
+                    <p>Get a quick mockup quote for your shipment.</p>
+                </div>
+                <div class="estimate-form-mockup">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label>Weight (kg)</label>
+                            <input type="number" placeholder="e.g. 50">
+                        </div>
+                        <div class="input-group">
+                            <label>Dimensions (LxWxH cm)</label>
+                            <input type="text" placeholder="e.g. 100x50x50">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group full-width">
+                            <label>Distance (km)</label>
+                            <input type="number" placeholder="e.g. 120">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-block" id="calc-btn" data-hover-trigger>Calculate
+                        Estimate</button>
+
+                    <div class="estimate-result hidden" id="estimate-result">
+                        <p>Estimated Cost:</p>
+                        <span class="price-tag">€ 145.00</span>
+                        <small>*Mockup estimation only.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container contact-container">
+            <div class="contact-header center">
+                <h2 class="section-title">Contact JA Direct</h2>
+                <p>Ready to move? Send us a message.</p>
+            </div>
+            <form class="contact-form-simple" data-reveal="up">
+                <div class="form-group">
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" data-hover-trigger>Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>JA Direct<span class="dot">.</span></h3>
+                <p>Premium Logistics Solutions.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#about" data-hover-trigger>About</a>
+                <a href="#contact" data-hover-trigger>Contact</a>
+            </div>
+            <div class="footer-copy">
+                &copy; 2024 JA Direct. Concept Mockup.
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
